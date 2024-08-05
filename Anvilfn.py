@@ -11,7 +11,7 @@ from dht import DHT11
 # We use the LED to indicate server calls and responses.
 sensor = DHT11(Pin(13))
 
-location = LocalTime.localtime('VOS', False)  # Example: NZ with daylight saving
+location = LocalTime.localtime('NZ', False)  # Example: NZ with daylight saving
 
 UPLINK_KEY = secrets['uplink']
 
