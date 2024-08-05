@@ -17,7 +17,9 @@ Use this class at your own risk!
 In this AnvilTime example the LocalTime.py class is called from from the Anvilfn.py function via the following instructions:
 
 _import LocalTime_
+
 _location = LocalTime.localtime('NZ', False)  # Example: NZ with daylight saving_
+
 _local_time, local_time_str = location.get_local_time()_
 
 Local time will be returned in a tuple format and a string which is more useable for timestamp recording lets say on a SDcard.
