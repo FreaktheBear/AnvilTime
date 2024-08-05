@@ -18,7 +18,7 @@ In this AnvilTime example the LocalTime.py class is called from from the Anvilfn
 
 _import LocalTime_
 
-_location = LocalTime.localtime('NZ', False)  # Example: NZ with daylight saving_
+_location = LocalTime.localtime('NZ', True)  # Example: NZ with daylight saving_
 
 _local_time, local_time_str = location.get_local_time()_
 
