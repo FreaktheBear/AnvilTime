@@ -15,11 +15,11 @@ Use this class at your own risk!
 
 ### AnvilTime Example ###
 In this AnvilTime example the LocalTime.py class is called from from the Anvilfn.py function via the following instructions:
-_
-import LocalTime
-location = LocalTime.localtime('NZ', False)  # Example: NZ with daylight saving
-local_time, local_time_str = location.get_local_time()
-_
+
+_import LocalTime_
+_location = LocalTime.localtime('NZ', False)  # Example: NZ with daylight saving_
+_local_time, local_time_str = location.get_local_time()_
+
 Local time will be returned in a tuple format and a string which is more useable for timestamp recording lets say on a SDcard.
 The time string returns resolution back in microseconds. However caution needs to be taken as I don't know how accurate the onboard Pico RTC is.
 Still, the fact that resolution is in microseconds should make it possible to use this class for a device which is used for example to capture sequence of events.
