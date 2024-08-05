@@ -1,4 +1,6 @@
 # Pi Pico LocalTime Class #
+Use this class at your own risk!
+
 This Anvil.Works project contains a Micropython LocalTime.py class which returns the local time for any Timezone (including DST offset when applicable).
 This software is tested on a Raspberry Pi Pico W and works together with the AnvilDashboardTempHum repository.
 The Pico is flashed with the following Anvil firmware: https://github.com/anvil-works/anvil-pico/releases/tag/v0.2.0
@@ -7,11 +9,12 @@ The Pico is flashed with the following Anvil firmware: https://github.com/anvil-
 The timezone information and DST formulas are based on the information from the following websites:
 http://www.webexhibits.org/daylightsaving/i.html (EU formulas valid from 1996 till 2099)
 https://www.worlddata.info/timezones/
-All timezones, DST, and shift times have been accounted for, which obviously presents some doubles in the actual timezone entries.
+All timezones, DST, and "roll-over" times have been accounted for, which obviously presents some doubles in the actual timezone entries.
 A separate (more compact) class will be created which only has the absolute Standard Time offsets and only codes for the timezones which use DST.
 To keep it as lean as possible you can also just create an entry for your specific timezone.
 
-Use this class at your own risk!
+The folder Spreadsheet contains a spreadsheet created with LibreOffice Calc which uses worlddata.info page info as a basis.
+Doubles in landcodes have been cleared and some corrections have been made. It also contains the specific DST formulas and roll-over times for each zone when applicable.
 
 ### AnvilTime Example ###
 In this AnvilTime example the LocalTime.py class is called from from the Anvilfn.py function via the following instructions:
