@@ -6,7 +6,16 @@ This software is tested on a Raspberry Pi Pico W and works together with the Anv
 The Pico is flashed with the following Anvil firmware: https://github.com/anvil-works/anvil-pico/releases/tag/v0.2.0
 
 Please bear in mind that the Pico W RTC first has to be set correctly. This part of the code can be find in the boot.py file:
-
+for i in range(10):
+    try:
+        print("Setting system time...")
+        ntptime.settime()
+        time.time()
+        print(f"UTC time is: {time.localtime()}")
+        break
+    except Exception as e:
+        print(f"Failed to set system time: {e}")
+        sleep(1)
 
 ## Used third party info ##
 The timezone information and DST formulas are based on the information from the following websites:
