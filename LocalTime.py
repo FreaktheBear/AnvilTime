@@ -3,7 +3,6 @@
 # See additional readme file for changed unique zone abbreviations
 # Daylight savings ref. formulas : http://www.webexhibits.org/daylightsaving/i.html
 
-import ntptime
 import time
 
 
@@ -64,7 +63,7 @@ class localtime:
                     'ST' : time.mktime((year,10,(31-(int(5*year/4+1))%7),1,0,0,0,0,0)), 'ST_offset' : (1*3600)},
             'EE' : {'DT' : time.mktime((year,3,(31-(int(5*year/4+4))%7),3,0,0,0,0,0)), 'DT_offset' : (3*3600),
                     'ST' : time.mktime((year,10,(31-(int(5*year/4+1))%7),4,0,0,0,0,0)), 'ST_offset' : (2*3600)},
-            'MSK' : {'ST_offset' : (3*3600)},
+            'MSK' : {'ST_off>set' : (3*3600)},
             'SAM' : {'ST_offset' : (4*3600)},
             'TR' : {'ST_offset' : (3*3600)},
             'WE' : {'DT' : time.mktime((year,3,(31-(int(5*year/4+4))%7),1,0,0,0,0,0)), 'DT_offset' : (1*3600),
