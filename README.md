@@ -5,6 +5,9 @@ This Anvil.Works project contains a Micropython LocalTime.py class which returns
 This software is tested on a Raspberry Pi Pico W and works together with the AnvilDashboardTempHum repository.
 The Pico is flashed with the following Anvil firmware: https://github.com/anvil-works/anvil-pico/releases/tag/v0.2.0
 
+Please bear in mind that the Pico W RTC first has to be set correctly. This part of the code can be find in the boot.py file:
+
+
 ## Used third party info ##
 The timezone information and DST formulas are based on the information from the following websites:
 http://www.webexhibits.org/daylightsaving/i.html (EU formulas valid from 1996 till 2099)
